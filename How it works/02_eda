@@ -1,0 +1,116 @@
+"""
+=========================================================
+02_eda.py
+=========================================================
+
+PROJECT STAGE:
+Exploratory Data Analysis (EDA) Layer
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file performs exploratory data analysis on the 
+retail dataset to understand demand behavior, 
+distribution patterns, and feature relationships.
+
+Before building forecasting models, we must understand:
+
+• How demand behaves over time
+• Whether trends or seasonality exist
+• Whether outliers are present
+• How different variables interact
+
+EDA transforms raw data into business understanding.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Machine learning models assume patterns exist.
+
+EDA helps us answer:
+
+• Is demand stable or volatile?
+• Does seasonality exist?
+• Are some regions stronger than others?
+• Does discount affect units sold?
+• Are there missing or extreme values?
+
+Without EDA, modeling becomes blind experimentation.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+1️⃣ Summary statistics are generated:
+   - Mean
+   - Standard deviation
+   - Min/Max
+   - Distribution shape
+
+2️⃣ Missing values are checked.
+   This ensures modeling stability.
+
+3️⃣ Basic visualizations may be created:
+   - Demand over time
+   - Region-level sales comparison
+   - Price vs Units Sold
+
+4️⃣ Correlation analysis may be performed:
+   To identify relationships between:
+   - Price
+   - Discount
+   - Competitor Pricing
+   - Units Sold
+
+---------------------------------------------------------
+📊 BUSINESS INSIGHTS GAINED
+---------------------------------------------------------
+From EDA, we can identify:
+
+• Which regions are high performing
+• Which categories are seasonal
+• Whether discounts significantly impact sales
+• Demand variability patterns
+
+These insights guide model selection and 
+feature engineering.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+EDA influences:
+
+→ 03_preprocessing.py (Feature preparation decisions)
+→ 04_baseline_models.py (Model choice logic)
+→ 05_lstm_model.py (Sequence modeling decision)
+→ Seasonality modules
+→ Pricing elasticity modeling
+
+It helps justify WHY LSTM was selected for time-series modeling.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Raw Data
+Layer 2: Validation
+Layer 3: Exploratory Intelligence   ← This file
+Layer 4: Feature Engineering
+Layer 5: Modeling
+Layer 6: Decision Intelligence
+
+--------------------------------------------------------
+
+"After validating the dataset, I performed exploratory 
+analysis to understand demand patterns, seasonality, 
+price sensitivity, and regional performance. This helped 
+guide model selection and feature engineering decisions."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+EDA is not visualization for decoration.
+It is strategic intelligence before modeling.
+
+Models should be chosen based on patterns,
+not assumptions.
+=========================================================
+"""
