@@ -1,0 +1,127 @@
+"""
+=========================================================
+06_uncertainty_estimation.py
+=========================================================
+
+PROJECT STAGE:
+Forecast Confidence & Risk Quantification Layer
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file estimates uncertainty in the LSTM demand 
+forecast.
+
+A forecast without uncertainty is incomplete.
+
+Instead of only predicting:
+
+    "Demand will be 500 units"
+
+We enhance it to:
+
+    "Demand will be 500 ± 40 units"
+
+This allows risk-aware decision making.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Machine learning models always have prediction error.
+
+If we ignore uncertainty:
+• Inventory decisions may cause stockouts
+• Overstocking risk increases
+• Financial risk increases
+
+Uncertainty estimation helps quantify forecast risk.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+1️⃣ Residual Calculation
+
+After forecasting, we compute:
+
+Residual = Actual - Predicted
+
+Residuals measure model error.
+
+2️⃣ Standard Deviation of Residuals
+
+We calculate:
+
+σ = standard deviation of residuals
+
+This measures forecast variability.
+
+3️⃣ Safety Stock Calculation
+
+Using statistical confidence:
+
+Safety Stock = Z × σ
+
+Where:
+Z = 1.96 (for 95% confidence)
+
+This ensures that inventory buffers account for model error.
+
+---------------------------------------------------------
+📊 WHY THIS STEP IS IMPORTANT
+---------------------------------------------------------
+This transforms forecasting into:
+
+Risk-aware forecasting.
+
+Instead of assuming perfect accuracy,
+we explicitly model uncertainty.
+
+This makes the system:
+
+• More realistic
+• More robust
+• More enterprise-ready
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+This file feeds into:
+
+→ 08_inventory_decision_layer.py
+→ recommendation_engine.py
+→ Streamlit dashboard metrics
+
+Safety stock depends directly on this step.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Validation
+Layer 3: EDA
+Layer 4: Preprocessing
+Layer 5: Baseline
+Layer 6: LSTM Forecast
+Layer 7: Uncertainty Quantification   ← This file
+Layer 8: Inventory & Pricing Decisions
+Layer 9: Deployment
+
+---------------------------------------------------------
+
+"After building the LSTM model, I implemented uncertainty 
+estimation by analyzing residual variance. This allowed the 
+system to calculate safety stock using statistical confidence 
+intervals, making inventory decisions risk-aware."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Prediction without uncertainty is incomplete.
+
+Professional AI systems always quantify risk.
+
+Uncertainty estimation is what separates
+academic modeling from real-world deployment.
+=========================================================
+"""
