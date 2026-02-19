@@ -1,0 +1,115 @@
+"""
+=========================================================
+01_data_loading.py
+=========================================================
+
+PROJECT STAGE:
+Data Ingestion Layer
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file is the starting point of the entire AI-Based 
+Demand Forecasting System.
+
+Its purpose is to load the raw dataset into memory and 
+validate its structure before any analysis or modeling 
+is performed.
+
+Every data-driven system must begin by ensuring the data 
+exists, is readable, and has the expected structure.
+
+Without correct data ingestion, the entire pipeline fails.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Before building forecasting models or analytics systems,
+we must answer:
+
+• Is the dataset accessible?
+• Are column names correct?
+• Is the dataset large enough?
+• Are there obvious structural issues?
+
+This file confirms that the raw retail dataset is usable
+for downstream modeling and intelligence layers.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+1️⃣ The CSV file (retail_store_inventory.csv) is loaded 
+   using pandas.
+
+2️⃣ The dataset shape is printed.
+   This tells us:
+   - Number of rows (observations)
+   - Number of columns (features)
+
+3️⃣ Column names are displayed.
+   This ensures:
+   - Expected fields exist
+   - No spelling inconsistencies
+
+4️⃣ The first few rows are previewed.
+   This allows manual inspection of:
+   - Data format
+   - Value types
+   - Potential anomalies
+
+---------------------------------------------------------
+📊 WHY THIS STEP IS IMPORTANT
+---------------------------------------------------------
+This step builds confidence that:
+
+• The dataset path is correct
+• The file is not corrupted
+• The schema matches expectations
+• The project can proceed safely
+
+It prevents debugging chaos later.
+
+In professional systems, this is called:
+"Data Validation & Schema Verification"
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+This file feeds directly into:
+
+→ 02_eda.py (Exploratory Data Analysis)
+→ 03_preprocessing.py
+→ Baseline & LSTM models
+→ All analytical modules
+
+If this step fails, every subsequent step fails.
+
+This is the foundation of the entire architecture.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Raw Data Layer
+Layer 2: Validation Layer   ← This file
+Layer 3: Feature Engineering
+Layer 4: Modeling
+Layer 5: Intelligence & Decisions
+Layer 6: Dashboard Deployment
+
+---------------------------------------------------------
+
+"In the first stage of the project, I implemented a data
+ingestion and validation layer to ensure that the retail
+dataset was structurally sound before performing any 
+forecasting or modeling tasks. This helped establish a 
+clean foundation for the entire pipeline."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Strong AI systems do not begin with models.
+They begin with verified data.
+
+Data reliability > Model complexity.
+=========================================================
+"""
