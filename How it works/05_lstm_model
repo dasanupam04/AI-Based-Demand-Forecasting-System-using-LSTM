@@ -1,0 +1,136 @@
+"""
+=========================================================
+05_lstm_model.py
+=========================================================
+
+PROJECT STAGE:
+Deep Learning Forecasting Engine
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file builds and trains the LSTM (Long Short-Term Memory) 
+neural network model for demand forecasting.
+
+It represents the primary predictive engine of the system.
+
+The objective:
+Learn temporal patterns in historical demand and predict 
+future sales accurately.
+
+---------------------------------------------------------
+🧠 WHY LSTM WAS CHOSEN
+---------------------------------------------------------
+Retail demand data is sequential and time-dependent.
+
+Traditional models:
+• Struggle with long-term dependencies
+• Cannot capture complex nonlinear relationships
+
+LSTM is designed to:
+• Remember long-term patterns
+• Handle time-series sequences
+• Capture nonlinear demand behavior
+• Learn seasonality and trend implicitly
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+1️⃣ Model Architecture Definition
+
+Typical architecture includes:
+• LSTM layers
+• Dropout layers (to prevent overfitting)
+• Dense output layer
+
+Input shape:
+(window_size, 1)
+
+2️⃣ Model Compilation
+
+Loss function:
+• Mean Squared Error (MSE)
+
+Optimizer:
+• Adam (adaptive learning rate)
+
+3️⃣ Model Training
+
+The model is trained on:
+• Preprocessed sequences
+• Training dataset only
+
+Validation set monitors overfitting.
+
+4️⃣ Model Saving
+
+After training, the model is saved as:
+
+outputs/model/lstm_model.keras
+
+This allows:
+• Reusability
+• Deployment without retraining
+• Separation of training and inference
+
+---------------------------------------------------------
+📊 WHAT THE MODEL LEARNS
+---------------------------------------------------------
+The LSTM learns:
+
+• Demand trends
+• Seasonality patterns
+• Short-term fluctuations
+• Implicit price effects (if included)
+• Complex nonlinear behavior
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+This model powers:
+
+→ 06_uncertainty_estimation.py
+→ 07_drift_detection.py
+→ 08_inventory_decision_layer.py
+→ model_comparison.py
+→ Streamlit dashboard forecasting
+→ What-if simulation logic
+→ AI recommendation engine
+
+Without this file:
+There is no forecasting capability.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Validation
+Layer 3: EDA
+Layer 4: Preprocessing
+Layer 5: Baseline Models
+Layer 6: Deep Learning Model   ← This file
+Layer 7: Intelligence & Decision Layer
+Layer 8: Deployment
+
+---------------------------------------------------------
+
+"I implemented an LSTM-based forecasting model to capture 
+temporal dependencies in retail demand. The model was trained 
+on sliding window sequences and saved as a reusable artifact 
+for real-time inference within the deployed dashboard."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Deep learning is powerful, but:
+
+• Requires proper preprocessing
+• Requires baseline comparison
+• Must be validated properly
+• Should be saved as an artifact for deployment
+
+The model is not the system.
+It is one component of a larger intelligence architecture.
+=========================================================
+"""
