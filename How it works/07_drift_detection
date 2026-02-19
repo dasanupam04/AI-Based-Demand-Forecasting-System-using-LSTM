@@ -1,0 +1,127 @@
+"""
+=========================================================
+07_drift_detection.py
+=========================================================
+
+PROJECT STAGE:
+Model Monitoring & Concept Drift Detection
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file monitors whether the demand pattern has changed 
+over time in a way that may reduce model accuracy.
+
+Machine learning models assume that:
+
+Future data behaves similarly to past data.
+
+If demand patterns shift significantly,
+the model becomes unreliable.
+
+This file detects such changes.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+In real-world retail systems:
+
+• Consumer behavior changes
+• Market trends shift
+• Competitor pricing changes
+• Seasonal patterns evolve
+
+If the statistical properties of demand change,
+the trained LSTM model may become outdated.
+
+This phenomenon is called:
+
+"Concept Drift"
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+1️⃣ Compare Historical vs Recent Data
+
+We split data into:
+• Historical distribution
+• Recent distribution
+
+2️⃣ Statistical Comparison
+
+We measure:
+• Mean shift
+• Variance shift
+• Distribution differences
+
+3️⃣ Drift Threshold Detection
+
+If change exceeds threshold:
+Drift Alert = True
+
+Otherwise:
+Drift Alert = False
+
+---------------------------------------------------------
+📊 WHY THIS STEP IS IMPORTANT
+---------------------------------------------------------
+Without drift detection:
+
+• Forecast accuracy silently degrades
+• Inventory decisions become risky
+• Financial losses increase
+
+With drift detection:
+
+• System becomes self-aware
+• Retraining can be triggered
+• Decision layer can adjust safety margins
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+This module feeds into:
+
+→ recommendation_engine.py
+→ multi_product_pipeline.py
+→ Streamlit dashboard alerts
+→ Future auto-retraining system
+
+It protects long-term reliability.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Validation
+Layer 3: EDA
+Layer 4: Preprocessing
+Layer 5: Baseline
+Layer 6: LSTM Forecast
+Layer 7: Uncertainty Estimation
+Layer 8: Drift Monitoring   ← This file
+Layer 9: Decision Layer
+Layer 10: Deployment
+
+---------------------------------------------------------
+
+"I implemented a drift detection module to monitor whether 
+demand distributions shift significantly over time. This 
+ensures that the forecasting model remains reliable and can 
+be retrained when necessary."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Building a model is not enough.
+
+Production AI systems must monitor:
+• Accuracy
+• Stability
+• Data distribution shifts
+
+Drift detection turns a static model
+into a monitored intelligent system.
+=========================================================
+"""
