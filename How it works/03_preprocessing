@@ -1,0 +1,124 @@
+"""
+=========================================================
+03_preprocessing.py
+=========================================================
+
+PROJECT STAGE:
+Data Preparation & Sequence Engineering
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file transforms raw demand data into a 
+model-ready format suitable for time-series forecasting.
+
+Machine learning models, especially LSTM, require:
+
+• Scaled numerical inputs
+• Sequential structured data
+• Proper train-test splits
+
+This file prepares the dataset for modeling.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Raw data cannot be directly fed into LSTM models.
+
+Problems addressed here:
+
+• Neural networks are sensitive to scale.
+• Time-series forecasting requires sequences.
+• Future data must not leak into training data.
+• Data must be reshaped into 3D format for LSTM.
+
+Without preprocessing:
+The model will either fail or learn incorrectly.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+1️⃣ Scaling the Demand Series
+
+   The Units Sold column is scaled using MinMaxScaler.
+
+   Why?
+   Neural networks train better when data is in 
+   a normalized range (0–1).
+
+2️⃣ Creating Time-Series Sequences
+
+   Using a sliding window approach:
+   Example:
+   If window_size = 30
+
+   Model input:
+   Day 1 → Day 30
+   Output:
+   Day 31
+
+   This converts the dataset into supervised learning format.
+
+3️⃣ Splitting into Train & Test Sets
+
+   Unlike random splitting,
+   time-series must preserve order.
+
+   First 80% → Training
+   Last 20% → Testing
+
+   This prevents data leakage.
+
+---------------------------------------------------------
+📊 WHY THIS STEP IS CRITICAL
+---------------------------------------------------------
+This step:
+
+• Converts raw retail demand into structured sequences
+• Enables LSTM to learn temporal dependencies
+• Maintains chronological integrity
+• Ensures model generalization
+
+This is the technical bridge between data and AI.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds directly into:
+
+→ 04_baseline_models.py
+→ 05_lstm_model.py
+→ 06_uncertainty_estimation.py
+→ 14_model_comparison.py
+
+Every forecasting model depends on this structured data.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Raw Data
+Layer 2: Validation
+Layer 3: EDA
+Layer 4: Feature Engineering & Sequence Creation  ← This file
+Layer 5: Modeling
+Layer 6: Intelligence Layer
+
+---------------------------------------------------------
+
+"I implemented a preprocessing layer that scaled the 
+demand data and converted it into sliding window 
+sequences, allowing the LSTM model to learn temporal 
+patterns effectively while preventing data leakage."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+AI models do not understand time.
+We must explicitly convert time-series data into 
+supervised sequences.
+
+Data preparation determines model performance 
+more than model complexity.
+=========================================================
+"""
