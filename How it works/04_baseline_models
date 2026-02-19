@@ -1,0 +1,109 @@
+"""
+=========================================================
+04_baseline_models.py
+=========================================================
+
+PROJECT STAGE:
+Benchmark & Baseline Modeling
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file builds traditional forecasting models to serve 
+as performance benchmarks before introducing deep learning.
+
+Before using LSTM, we must answer:
+
+• Is a simple model already sufficient?
+• Does complex modeling truly improve performance?
+• How much value does deep learning add?
+
+This file ensures the system is scientifically grounded.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Using only LSTM without comparison is risky.
+
+Without baselines:
+• We cannot measure improvement.
+• We cannot justify model complexity.
+• We cannot demonstrate robustness.
+
+Baseline models create a performance reference point.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical baseline approaches may include:
+
+1️⃣ Naive Forecast
+   Tomorrow = Today
+
+2️⃣ Moving Average
+   Forecast = Mean of previous N days
+
+3️⃣ Linear Regression
+   Simple trend-based prediction
+
+4️⃣ ARIMA (if implemented)
+   Statistical time-series modeling
+
+Each model is trained and evaluated on the same 
+train-test split created in preprocessing.
+
+Performance metrics are calculated:
+• MAE (Mean Absolute Error)
+• RMSE (Root Mean Squared Error)
+
+---------------------------------------------------------
+📊 WHY THIS STEP IS CRITICAL
+---------------------------------------------------------
+This step:
+
+• Prevents over-engineering
+• Validates model choice
+• Demonstrates rigor
+• Strengthens academic credibility
+
+It proves LSTM is not chosen blindly.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ 05_lstm_model.py
+→ 14_model_comparison.py
+→ Final dashboard model selection
+
+This file sets the baseline performance level.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Validation
+Layer 3: EDA
+Layer 4: Preprocessing
+Layer 5: Baseline Modeling   ← This file
+Layer 6: Advanced Modeling (LSTM)
+Layer 7: Intelligence Layer
+
+---------------------------------------------------------
+
+"Before implementing LSTM, I developed baseline 
+statistical models to establish a performance benchmark. 
+This allowed me to objectively compare and validate the 
+added value of deep learning in demand forecasting."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Always benchmark before scaling complexity.
+
+A good engineer proves improvement,
+not just builds complexity.
+=========================================================
+"""
