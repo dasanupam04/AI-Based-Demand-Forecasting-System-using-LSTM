@@ -1,0 +1,132 @@
+"""
+=========================================================
+08_inventory_decision_layer.py
+=========================================================
+
+PROJECT STAGE:
+Operational Inventory Decision Layer
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file converts demand forecasts and uncertainty 
+estimates into actionable inventory decisions.
+
+Forecasting alone does not create business value.
+
+Value is created when forecasts are used to determine:
+• How much to reorder
+• When to reorder
+• Whether inventory levels are sufficient
+
+This file bridges AI predictions and supply chain action.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Retail businesses face two major risks:
+
+1️⃣ Stockouts
+   → Lost sales
+   → Customer dissatisfaction
+
+2️⃣ Overstocking
+   → Capital lockup
+   → Storage costs
+
+The decision layer balances demand forecast with risk buffer
+to optimize reorder quantities.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+1️⃣ Forecast Demand
+
+Uses predicted future demand from LSTM.
+
+2️⃣ Safety Stock
+
+Incorporates uncertainty using:
+
+Safety Stock = Z × residual_std
+
+3️⃣ Reorder Point Calculation
+
+Reorder Point =
+Forecast Demand + Safety Stock
+
+4️⃣ Inventory Comparison
+
+If:
+Current Inventory < Reorder Point
+
+→ Recommend reorder
+
+Else:
+Inventory sufficient
+
+---------------------------------------------------------
+📊 WHY THIS STEP IS CRITICAL
+---------------------------------------------------------
+This is where the system becomes:
+
+A decision intelligence platform,
+not just a forecasting model.
+
+Instead of saying:
+
+"Demand will be 500"
+
+It says:
+
+"Order 120 additional units to avoid stockout risk."
+
+That is real business value.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+This module uses outputs from:
+
+→ 05_lstm_model.py
+→ 06_uncertainty_estimation.py
+→ 07_drift_detection.py
+
+It feeds into:
+
+→ recommendation_engine.py
+→ Streamlit dashboard
+→ Multi-product pipeline
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Validation
+Layer 3: EDA
+Layer 4: Preprocessing
+Layer 5: Baseline
+Layer 6: Forecasting
+Layer 7: Uncertainty
+Layer 8: Drift Monitoring
+Layer 9: Inventory Optimization   ← This file
+Layer 10: Strategic Recommendation
+Layer 11: Deployment
+
+---------------------------------------------------------
+
+"After forecasting demand and estimating uncertainty, 
+I implemented an inventory decision layer that calculates 
+reorder points and safety stock to minimize stockout and 
+overstock risk."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Prediction is intelligence.
+Decision-making is impact.
+
+AI becomes valuable only when tied to business action.
+=========================================================
+"""
