@@ -1,0 +1,135 @@
+"""
+=========================================================
+16_advanced_seasonality.py
+=========================================================
+
+PROJECT STAGE:
+Advanced Temporal Intelligence & Long-Cycle Analysis
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file extends basic seasonality analysis by performing
+advanced time-series decomposition and long-term cycle analysis.
+
+While 10_seasonality_analysis.py identifies monthly patterns,
+this file extracts deeper temporal structure such as:
+
+• Long-term trend behavior
+• Cyclical patterns beyond monthly seasonality
+• Strength of seasonal influence
+• Residual noise patterns
+
+This enables long-horizon strategic planning.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Basic monthly aggregation answers:
+"When is demand high?"
+
+Advanced decomposition answers:
+"Why is demand changing over time?"
+
+Retail demand consists of three components:
+
+1️⃣ Trend
+   Long-term upward or downward movement.
+
+2️⃣ Seasonality
+   Repeating short-term patterns.
+
+3️⃣ Residual
+   Random noise or unexplained variation.
+
+Without decomposition:
+Trend and seasonality may be confused.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+1️⃣ Time-Series Decomposition
+
+Using statistical techniques such as:
+
+seasonal_decompose()
+
+The series is split into:
+
+• Trend component
+• Seasonal component
+• Residual component
+
+2️⃣ Seasonality Strength Calculation
+
+Seasonality Strength =
+Variance(seasonal component) /
+Variance(total series)
+
+Higher value → stronger seasonal influence.
+
+3️⃣ Long-Cycle Trend Detection
+
+Analyzes whether demand is:
+
+• Growing long-term
+• Declining
+• Stable
+
+This supports expansion or contraction decisions.
+
+---------------------------------------------------------
+📊 BUSINESS VALUE CREATED
+---------------------------------------------------------
+This module enables:
+
+• Long-term investment planning
+• Category expansion decisions
+• Capacity planning
+• Strategic budget allocation
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ recommendation_engine.py
+→ Executive KPI layer
+→ Streamlit advanced seasonal charts
+→ What-if simulation context
+
+It strengthens forecasting interpretation.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Validation
+Layer 3: EDA
+Layer 4: Preprocessing
+Layer 5: Forecasting
+Layer 6: Risk & Inventory Decisions
+Layer 7: Regional Intelligence
+Layer 8: Category Intelligence
+Layer 9: Advanced Temporal Intelligence   ← This file
+Layer 10: Strategic AI Engine
+Layer 11: Deployment
+
+---------------------------------------------------------
+
+"I extended the seasonality analysis using time-series 
+decomposition to separate long-term trends from recurring 
+seasonal patterns, enabling strategic planning beyond 
+short-term forecasting."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Basic seasonality shows repetition.
+
+Advanced decomposition explains structure.
+
+Strong forecasting systems combine both.
+=========================================================
+"""
