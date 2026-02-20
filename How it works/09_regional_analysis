@@ -1,0 +1,124 @@
+"""
+=========================================================
+09_regional_analysis.py
+=========================================================
+
+PROJECT STAGE:
+Regional Business Intelligence Layer
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file analyzes demand and profitability across 
+different regions and stores.
+
+Forecasting demand at product level is useful,
+but business strategy requires regional insights.
+
+This module answers:
+
+• Which regions perform best?
+• Where is growth happening?
+• Which regions are declining?
+• Where is inventory inefficient?
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Retail businesses operate across:
+
+• Multiple stores
+• Multiple regions
+• Different demand patterns
+
+Without regional analysis:
+
+• Growth opportunities are missed
+• Weak regions are ignored
+• Inventory distribution becomes inefficient
+
+This file provides geographic intelligence.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+1️⃣ Regional Demand Aggregation
+
+Total units sold grouped by:
+• Region
+• Store
+
+2️⃣ Regional Growth Rate
+
+Growth % calculated over time:
+(Current Period - Previous Period) / Previous Period
+
+3️⃣ Regional Profitability
+
+Revenue and profit calculated using:
+Units Sold × Price × (1 - Discount)
+
+4️⃣ Demand Volatility by Region
+
+Standard deviation of units sold per region.
+
+5️⃣ Stock Efficiency
+
+Units Sold / Inventory Level
+
+---------------------------------------------------------
+📊 BUSINESS VALUE CREATED
+---------------------------------------------------------
+This module enables:
+
+• Identifying high-growth regions
+• Detecting underperforming areas
+• Redistributing inventory strategically
+• Prioritizing expansion
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ recommendation_engine.py
+→ Dashboard regional tables
+→ Executive KPI layer
+→ Strategic planning logic
+
+It complements product-level forecasting 
+with macro-level intelligence.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Validation
+Layer 3: EDA
+Layer 4: Preprocessing
+Layer 5: Forecasting
+Layer 6: Inventory Decisions
+Layer 7: Regional Intelligence   ← This file
+Layer 8: Strategic Recommendations
+Layer 9: Deployment
+
+---------------------------------------------------------
+
+"I extended the forecasting system with a regional 
+intelligence layer to analyze growth, profitability, 
+and volatility across geographic segments, enabling 
+strategic inventory and pricing decisions."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Forecasting answers:
+What will happen?
+
+Regional analysis answers:
+Where should we act?
+
+Strategy requires both.
+=========================================================
+"""
