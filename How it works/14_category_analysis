@@ -1,0 +1,126 @@
+"""
+=========================================================
+14_category_analysis.py
+=========================================================
+
+PROJECT STAGE:
+Category-Level Strategic Intelligence
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file analyzes performance at the product category level.
+
+Retail strategy is often executed at category level, not 
+individual SKU level.
+
+Examples:
+• Electronics
+• Apparel
+• Groceries
+• Seasonal products
+
+This module evaluates:
+
+• Category profitability
+• Category growth
+• Category demand stability
+• Category seasonal strength
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+While forecasting predicts demand for individual products,
+business strategy often requires broader grouping.
+
+Executives ask:
+
+• Which categories are most profitable?
+• Which categories are declining?
+• Which categories are highly seasonal?
+• Where should we invest marketing budget?
+
+This file provides that macro-level insight.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+1️⃣ Category Aggregation
+
+Data grouped by Category to compute:
+• Total Units Sold
+• Total Revenue
+• Total Profit
+
+2️⃣ Category Profitability Calculation
+
+Revenue =
+Units Sold × Price × (1 - Discount)
+
+Estimated cost may be assumed as:
+Price × cost_factor
+
+Profit =
+Revenue - Cost
+
+3️⃣ Category Growth Rate
+
+Measures demand growth over time.
+
+4️⃣ Category Volatility
+
+Standard deviation of demand within category.
+
+---------------------------------------------------------
+📊 BUSINESS VALUE CREATED
+---------------------------------------------------------
+This module enables:
+
+• Category investment prioritization
+• Strategic marketing allocation
+• Supply chain planning
+• Seasonal category management
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ recommendation_engine.py
+→ Streamlit category tables
+→ Seasonality strength analysis
+→ Executive KPI layer
+
+It complements regional intelligence.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Validation
+Layer 3: EDA
+Layer 4: Preprocessing
+Layer 5: Forecasting
+Layer 6: Risk & Inventory Decisions
+Layer 7: Regional Intelligence
+Layer 8: Category Intelligence   ← This file
+Layer 9: Strategic AI Engine
+Layer 10: Deployment
+
+---------------------------------------------------------
+
+"I implemented a category-level analysis module to evaluate 
+profitability, growth, and volatility across product groups, 
+allowing strategic decision-making beyond individual SKUs."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Individual product forecasting is tactical.
+
+Category intelligence is strategic.
+
+Strong retail systems operate at both levels.
+=========================================================
+"""
