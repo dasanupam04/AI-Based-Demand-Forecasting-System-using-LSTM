@@ -1,0 +1,120 @@
+"""
+=========================================================
+src/what_if_simulation.py
+=========================================================
+
+PROJECT STAGE:
+Strategic Scenario Simulation Engine
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module allows simulation of hypothetical business
+scenarios to evaluate their impact on demand and revenue.
+
+Instead of only predicting the future, this module answers:
+
+• What happens if price increases by 10%?
+• What if we reduce price by 5%?
+• How will demand respond?
+• How will revenue change?
+
+This transforms forecasting into strategic experimentation.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Forecasting assumes current conditions continue.
+
+However, business leaders constantly ask:
+
+"If we change something, what will happen?"
+
+Without simulation:
+• Pricing decisions are risky
+• Revenue impact is uncertain
+• Strategy becomes reactive
+
+This module enables proactive decision-making.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical function:
+simulate_price_change(current_price, elasticity, price_change%)
+
+Steps:
+
+1️⃣ Calculate new price:
+
+New Price =
+Current Price × (1 + price_change%)
+
+2️⃣ Estimate demand response using elasticity:
+
+% Change in Demand =
+Elasticity × % Change in Price
+
+3️⃣ Estimate new demand level
+
+4️⃣ Calculate projected revenue impact
+
+Returns:
+• New estimated demand
+• New estimated revenue
+• Interpretation message
+
+---------------------------------------------------------
+📊 WHY THIS FILE IS IMPORTANT
+---------------------------------------------------------
+This module:
+
+• Enables strategic experimentation
+• Demonstrates advanced business thinking
+• Makes the dashboard interactive
+• Impresses recruiters & stakeholders
+
+It moves the system from prediction → simulation.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Uses outputs from:
+
+→ pricing_analysis.py (elasticity)
+→ forecasting modules (baseline demand)
+
+Feeds into:
+
+→ app.py (What-If Simulation Panel)
+→ recommendation_engine.py (optional future use)
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Forecasting
+Layer 3: Pricing Intelligence
+Layer 4: Scenario Simulation Engine   ← This file
+Layer 5: Strategic Recommendation
+Layer 6: Dashboard
+
+---------------------------------------------------------
+
+"I built a what-if simulation module that models price 
+changes using demand elasticity to estimate future demand 
+and revenue impact, enabling strategic experimentation 
+within the dashboard."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Forecasting predicts what may happen.
+
+Simulation evaluates what could happen 
+if we change business decisions.
+
+Strategic systems must support experimentation.
+=========================================================
+"""
