@@ -1,0 +1,114 @@
+"""
+=========================================================
+src/data_utils.py
+=========================================================
+
+PROJECT STAGE:
+Production Data Utility Layer
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This file provides reusable data utility functions 
+used across the entire production system.
+
+Instead of loading and filtering data repeatedly 
+inside notebooks or the dashboard, we centralize 
+data operations in this module.
+
+This ensures:
+
+• Clean architecture
+• Code reusability
+• Maintainability
+• Scalability
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Without modular utilities:
+
+• Data loading logic would be duplicated
+• Filtering logic would be repeated
+• Errors would increase
+• Maintenance would become difficult
+
+This module standardizes:
+
+• Dataset loading
+• Store-level filtering
+• Product-level filtering
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical functions include:
+
+1️⃣ load_data(path)
+
+Loads the CSV dataset and returns a Pandas DataFrame.
+
+Purpose:
+Centralized data ingestion for app.py and other modules.
+
+2️⃣ filter_store_product(df, store_id, product_id)
+
+Filters dataset for a specific store and product.
+
+Purpose:
+Enable dynamic dashboard selection.
+Support multi-product pipeline logic.
+Ensure modeling occurs on selected subset.
+
+---------------------------------------------------------
+📊 WHY THIS FILE IS IMPORTANT
+---------------------------------------------------------
+This file separates:
+
+Data operations
+from
+Modeling logic
+
+This follows clean software engineering principles:
+
+Single Responsibility Principle:
+Each module handles one responsibility.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Used directly by:
+
+→ app.py
+→ multi_product_pipeline.py
+→ modeling modules
+→ recommendation engine
+
+Every dashboard interaction begins with this module.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Raw Data Storage
+Layer 2: Data Utility Module   ← This file
+Layer 3: Modeling & Intelligence
+Layer 4: Dashboard Orchestration
+
+---------------------------------------------------------
+
+"I modularized data ingestion and filtering logic into a 
+dedicated utility module to maintain clean architecture 
+and enable scalable multi-product forecasting."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Research notebooks build models.
+
+Production systems require modular structure.
+
+Separating utilities from logic improves maintainability 
+and system reliability.
+=========================================================
+"""
