@@ -1,0 +1,122 @@
+"""
+=========================================================
+src/decision_engine.py
+=========================================================
+
+PROJECT STAGE:
+Operational Inventory Decision Module
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module converts demand forecasts and uncertainty 
+estimates into actionable inventory decisions.
+
+Forecasting predicts demand.
+This module decides what to do about it.
+
+It determines:
+
+• Reorder quantity
+• Reorder point
+• Safety stock buffer
+• Stock sufficiency status
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Retail systems face two major risks:
+
+1️⃣ Stockouts
+   → Lost revenue
+   → Customer dissatisfaction
+
+2️⃣ Overstocking
+   → Capital lockup
+   → Storage cost
+
+This module balances forecasted demand with 
+risk-adjusted safety stock to optimize inventory decisions.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical workflow:
+
+1️⃣ Receive inputs:
+   • Forecasted demand
+   • Safety stock
+   • Current inventory
+   • Window size (forecast horizon)
+
+2️⃣ Calculate Reorder Point
+
+Reorder Point =
+Forecast Demand + Safety Stock
+
+3️⃣ Compare Inventory Level
+
+IF Current Inventory < Reorder Point:
+   → Recommend reorder
+ELSE:
+   → Inventory sufficient
+
+4️⃣ Return structured decision output
+
+---------------------------------------------------------
+📊 WHY THIS FILE IS IMPORTANT
+---------------------------------------------------------
+This is where AI delivers real business value.
+
+Instead of just predicting:
+
+"Demand will be 600 units"
+
+The system says:
+
+"Order 150 additional units to avoid stockout risk."
+
+This transforms prediction into action.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Uses outputs from:
+
+→ lstm_model.py
+→ preprocessing.py
+→ uncertainty_estimation logic
+
+Feeds into:
+
+→ recommendation_engine.py
+→ multi_product_pipeline.py
+→ app.py dashboard metrics
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Preprocessing
+Layer 3: Forecasting Model
+Layer 4: Uncertainty Estimation
+Layer 5: Inventory Decision Engine   ← This file
+Layer 6: Strategic Recommendation
+Layer 7: Dashboard
+
+---------------------------------------------------------
+
+"I implemented an operational decision engine that converts 
+forecasted demand and uncertainty into reorder point and 
+safety stock calculations, enabling risk-aware inventory planning."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Forecasting alone does not create business impact.
+
+Decision engines operationalize predictions 
+into measurable actions.
+=========================================================
+"""
