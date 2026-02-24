@@ -1,0 +1,114 @@
+"""
+=========================================================
+src/lstm_model.py
+=========================================================
+
+PROJECT STAGE:
+Production Deep Learning Forecasting Module
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module defines and manages the LSTM forecasting model 
+used in the production system.
+
+Unlike the notebook version (experimental training),
+this file contains reusable model-building logic that ensures:
+
+• Clean architecture
+• Reproducible model structure
+• Separation of model definition from training scripts
+• Scalability for retraining
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+If model architecture is defined inside notebooks or app.py:
+
+• Code duplication increases
+• Architecture becomes hard to maintain
+• Updating layers requires editing multiple files
+
+This module centralizes:
+
+• Model architecture
+• Compilation settings
+• Training configuration
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical responsibilities include:
+
+1️⃣ build_lstm_model(input_shape)
+
+Defines the LSTM architecture:
+
+• LSTM layers
+• Dropout layers (prevent overfitting)
+• Dense output layer
+
+2️⃣ compile model
+
+Loss:
+Mean Squared Error (MSE)
+
+Optimizer:
+Adam
+
+3️⃣ Optional: train_model()
+
+Handles model training if retraining is required.
+
+---------------------------------------------------------
+📊 WHY THIS FILE IS IMPORTANT
+---------------------------------------------------------
+This file ensures:
+
+• Production model matches training architecture
+• Model is reusable
+• Future improvements can be made centrally
+• Deployment is clean and modular
+
+It transforms research model into production artifact.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Used by:
+
+→ model_comparison.py
+→ multi_product_pipeline.py
+→ retraining workflows
+→ app.py (when model is loaded)
+
+The trained model artifact is saved in:
+
+outputs/model/lstm_model.keras
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Preprocessing
+Layer 3: Forecasting Model Definition   ← This file
+Layer 4: Intelligence Layer
+Layer 5: Dashboard
+
+---------------------------------------------------------
+
+"I modularized the LSTM architecture into a production-ready 
+module to separate model definition from experimentation, 
+ensuring scalability and maintainability."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+In production ML systems:
+
+Model architecture should be defined once,
+reused everywhere,
+and saved as a deployable artifact.
+=========================================================
+"""
