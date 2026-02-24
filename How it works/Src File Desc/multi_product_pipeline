@@ -1,0 +1,122 @@
+"""
+=========================================================
+src/multi_product_pipeline.py
+=========================================================
+
+PROJECT STAGE:
+Scalable Multi-Product Forecasting Pipeline
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module enables forecasting and decision-making
+for multiple products and stores dynamically.
+
+Instead of running forecasting manually for one product,
+this pipeline:
+
+• Iterates through products
+• Applies preprocessing
+• Generates forecasts
+• Estimates uncertainty
+• Produces inventory decisions
+
+This makes the system scalable.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Retail businesses manage:
+
+• Hundreds of products
+• Multiple stores
+• Multiple regions
+
+Without automation:
+
+• Forecasting must be done manually
+• Decision-making becomes inefficient
+• Scaling becomes impossible
+
+This pipeline automates the entire workflow.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical steps inside run_pipeline_for_product():
+
+1️⃣ Filter dataset for selected store & product
+   (Uses data_utils.py)
+
+2️⃣ Preprocess demand
+   (Uses preprocessing.py)
+
+3️⃣ Load trained LSTM model
+   (From outputs/model/lstm_model.keras)
+
+4️⃣ Generate predictions
+
+5️⃣ Estimate uncertainty
+   (Residual standard deviation)
+
+6️⃣ Call decision_engine.py
+   to generate reorder recommendations
+
+7️⃣ Return structured result dictionary
+
+---------------------------------------------------------
+📊 WHY THIS FILE IS IMPORTANT
+---------------------------------------------------------
+This file enables:
+
+• Enterprise scalability
+• Multi-product intelligence
+• Batch forecasting capability
+• Future automation support
+
+It converts your project from a demo
+into a scalable forecasting system.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Uses:
+
+→ data_utils.py
+→ preprocessing.py
+→ lstm_model.py
+→ decision_engine.py
+
+Feeds into:
+
+→ app.py
+→ future automation workflows
+→ potential API deployment
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data Utilities
+Layer 2: Preprocessing
+Layer 3: Forecasting Model
+Layer 4: Decision Engine
+Layer 5: Multi-Product Orchestration   ← This file
+Layer 6: Dashboard / API
+
+---------------------------------------------------------
+
+"I implemented a scalable multi-product forecasting pipeline 
+that dynamically applies preprocessing, forecasting, 
+uncertainty estimation, and decision logic across multiple 
+products and stores."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Scalability is what separates
+academic projects from production systems.
+
+Automation pipelines enable enterprise deployment.
+=========================================================
+"""
