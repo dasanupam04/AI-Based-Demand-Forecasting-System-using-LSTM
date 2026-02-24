@@ -1,0 +1,123 @@
+"""
+=========================================================
+src/seasonality_analysis.py
+=========================================================
+
+PROJECT STAGE:
+Production Seasonality & Temporal Intelligence Module
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module extracts seasonal patterns, long-term trends,
+and temporal strength metrics from retail demand data.
+
+While the forecasting model (LSTM) learns patterns implicitly,
+this module provides explicit and interpretable time insights.
+
+It answers:
+
+• Which months have peak demand?
+• How strong is seasonality?
+• Is demand trending upward or downward?
+• Are certain categories highly seasonal?
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Retail demand is composed of:
+
+1️⃣ Trend (long-term movement)
+2️⃣ Seasonality (repeating cycles)
+3️⃣ Residual (random noise)
+
+Without decomposition:
+
+• Trend and seasonal spikes get mixed
+• Promotion impact becomes unclear
+• Long-term planning becomes difficult
+
+This module separates those components.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical functions include:
+
+1️⃣ monthly_seasonal_pattern(df)
+
+Aggregates demand by month.
+Used for seasonal charts in dashboard.
+
+2️⃣ category_decomposition(df, category)
+
+Performs time-series decomposition to extract:
+• Trend
+• Seasonal
+• Residual components
+
+3️⃣ seasonality_strength(decomposition_result)
+
+Calculates:
+
+Seasonality Strength =
+Variance(seasonal component) /
+Variance(total series)
+
+Higher value → stronger seasonal influence.
+
+4️⃣ long_cycle_trend(df)
+
+Detects long-term upward or downward demand trend.
+
+---------------------------------------------------------
+📊 BUSINESS VALUE CREATED
+---------------------------------------------------------
+This module enables:
+
+• Pre-season inventory planning
+• Strategic marketing timing
+• Category-level seasonal planning
+• Long-term expansion decisions
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ recommendation_engine.py
+→ Executive KPI metrics
+→ Streamlit seasonal charts
+→ What-if simulation context
+
+Supports promotion and pricing decisions.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Forecasting
+Layer 3: Risk & Inventory
+Layer 4: Regional Intelligence
+Layer 5: Seasonality Intelligence   ← This file
+Layer 6: Strategic AI Engine
+Layer 7: Dashboard
+
+---------------------------------------------------------
+
+"I implemented a seasonality intelligence module that 
+decomposes time-series demand into trend and seasonal 
+components, enabling strategic planning beyond short-term 
+forecasting."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Forecasting predicts future numbers.
+
+Seasonality analysis explains the structure behind them.
+
+Interpretability strengthens strategic trust.
+=========================================================
+"""
