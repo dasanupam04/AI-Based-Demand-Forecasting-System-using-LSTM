@@ -1,0 +1,134 @@
+"""
+=========================================================
+src/regional_insights.py
+=========================================================
+
+PROJECT STAGE:
+Regional & Geographic Intelligence Module
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module analyzes retail performance across regions 
+and stores to provide geographic-level business insights.
+
+Retail decisions are rarely made only at product level.
+
+Executives need to understand:
+
+• Which regions are growing?
+• Which stores are underperforming?
+• Where inventory is inefficient?
+• Where profitability is highest?
+
+This module provides that strategic intelligence.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Without regional analysis:
+
+• Growth opportunities remain hidden
+• Weak markets go unnoticed
+• Inventory redistribution is inefficient
+• Expansion planning lacks data support
+
+This module enables location-based strategy.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical functions include:
+
+1️⃣ region_store_summary(df)
+
+Aggregates demand and revenue by:
+• Region
+• Store ID
+
+Used for side-by-side performance comparison.
+
+2️⃣ region_growth_analysis(df)
+
+Calculates growth rate over time:
+
+Growth % =
+(Current Period Sales - Previous Period Sales)
+/ Previous Period Sales × 100
+
+Helps detect expanding or declining regions.
+
+3️⃣ region_profitability_analysis(df)
+
+Computes revenue and estimated profit by region.
+
+Revenue =
+Units Sold × Price × (1 - Discount)
+
+Profit =
+Revenue - Estimated Cost
+
+4️⃣ region_demand_volatility(df)
+
+Calculates standard deviation of demand by region.
+
+High volatility → Higher safety stock needed.
+
+5️⃣ region_stock_efficiency(df)
+
+Measures:
+
+Units Sold / Inventory Level
+
+Indicates inventory utilization efficiency.
+
+---------------------------------------------------------
+📊 BUSINESS VALUE CREATED
+---------------------------------------------------------
+This module enables:
+
+• Regional investment prioritization
+• Inventory redistribution decisions
+• Identification of high-growth markets
+• Detection of underperforming regions
+• Geographic risk assessment
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ recommendation_engine.py
+→ Executive KPI metrics
+→ Streamlit regional tables
+→ AI recommendations
+
+Used heavily in strategic dashboard sections.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data Utilities
+Layer 2: Forecasting
+Layer 3: Risk & Inventory Decisions
+Layer 4: Regional Intelligence   ← This file
+Layer 5: Strategic Recommendation
+Layer 6: Dashboard
+
+---------------------------------------------------------
+
+"I implemented a regional intelligence module that evaluates 
+growth, profitability, demand volatility, and stock efficiency 
+across geographic segments to support strategic retail planning."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Product-level forecasting is tactical.
+
+Regional intelligence is strategic.
+
+Strong retail AI systems operate across both dimensions.
+=========================================================
+"""
