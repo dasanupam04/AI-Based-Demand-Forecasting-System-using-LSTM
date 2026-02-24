@@ -1,0 +1,117 @@
+"""
+=========================================================
+src/model_comparison.py
+=========================================================
+
+PROJECT STAGE:
+Model Benchmarking & Performance Evaluation
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module compares forecasting model performance 
+to determine the best predictive model.
+
+Instead of blindly using LSTM, this module evaluates:
+
+• LSTM performance
+• ARIMA performance
+• (Previously RF, if implemented)
+
+It selects the best model based on objective metrics.
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Using a single model without comparison is risky.
+
+We must answer:
+
+• Is LSTM actually better?
+• Does ARIMA perform similarly?
+• Which model generalizes better?
+
+This module provides scientific validation.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+1️⃣ Train / Use Pretrained LSTM
+
+Uses sequence-based input.
+
+2️⃣ Train / Use ARIMA Model
+
+Statistical time-series forecasting approach.
+
+3️⃣ Generate Predictions
+
+Both models predict on the same test data.
+
+4️⃣ Calculate Evaluation Metrics
+
+Common metrics:
+
+• MAE (Mean Absolute Error)
+• RMSE (Root Mean Squared Error)
+
+5️⃣ Compare Results
+
+Model with lowest error selected as best.
+
+Returns:
+
+• Model performance table
+• Best model name
+
+---------------------------------------------------------
+📊 WHY THIS FILE IS IMPORTANT
+---------------------------------------------------------
+This module:
+
+• Prevents overfitting bias
+• Validates deep learning usefulness
+• Strengthens academic rigor
+• Improves production reliability
+
+Recruiters love model comparison.
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Used in:
+
+→ app.py (Model Comparison Section)
+→ recommendation_engine.py (optional weighting)
+→ future retraining logic
+
+Feeds into:
+
+Streamlit dashboard model comparison panel.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Preprocessing
+Layer 3: Forecasting Models
+Layer 4: Model Comparison Layer   ← This file
+Layer 5: Strategic Intelligence
+Layer 6: Dashboard
+
+---------------------------------------------------------
+
+"I implemented a model comparison module to benchmark LSTM 
+against ARIMA using MAE and RMSE metrics, ensuring that the 
+chosen model delivers measurable performance improvement."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Complex models must justify their complexity.
+
+Benchmarking ensures engineering decisions 
+are data-driven, not assumption-driven.
+=========================================================
+"""
