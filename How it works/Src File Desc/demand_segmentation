@@ -1,0 +1,118 @@
+"""
+=========================================================
+src/demand_segmentation.py
+=========================================================
+
+PROJECT STAGE:
+Demand Stability & Volatility Segmentation Module
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module classifies products based on demand stability.
+
+Not all products behave the same way.
+
+Some products:
+• Have consistent, stable demand.
+
+Others:
+• Experience high fluctuations.
+• Are highly seasonal or promotion-driven.
+
+This module categorizes products into segments such as:
+
+• Stable Demand
+• Moderate Volatility
+• High Volatility
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Using the same inventory strategy for all products is risky.
+
+Highly volatile products require:
+• Higher safety stock
+• Closer monitoring
+• Adaptive pricing strategies
+
+Stable products require:
+• Lower buffer
+• Steady replenishment
+
+Without segmentation:
+Inventory decisions become inefficient.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical logic:
+
+1️⃣ Group data by Product ID.
+
+2️⃣ Calculate demand standard deviation:
+Volatility = Standard deviation of Units Sold
+
+3️⃣ Define threshold levels:
+Example:
+• Low volatility → Stable
+• Medium volatility → Moderate
+• High volatility → Volatile
+
+4️⃣ Return a structured dataframe with:
+• Product ID
+• Volatility score
+• Demand Segment label
+
+---------------------------------------------------------
+📊 BUSINESS VALUE CREATED
+---------------------------------------------------------
+This module enables:
+
+• Risk-adjusted inventory planning
+• Targeted promotion strategy
+• Differentiated pricing policies
+• Strategic supply chain allocation
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ recommendation_engine.py
+→ inventory_decision_layer.py
+→ Executive KPI logic
+→ Streamlit dashboard display
+
+Used to adjust safety stock recommendations dynamically.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Forecasting
+Layer 3: Risk & Inventory
+Layer 4: Regional & Category Intelligence
+Layer 5: Demand Segmentation   ← This file
+Layer 6: Strategic AI Engine
+Layer 7: Dashboard
+
+---------------------------------------------------------
+
+"I implemented a demand segmentation module that classifies 
+products based on volatility, enabling differentiated 
+inventory and pricing strategies for stable versus 
+high-risk products."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+All products are not equal.
+
+Risk-aware systems classify behavior
+before applying decisions.
+
+Segmentation improves strategic precision.
+=========================================================
+"""
