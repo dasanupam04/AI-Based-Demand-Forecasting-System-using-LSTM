@@ -1,0 +1,123 @@
+"""
+=========================================================
+src/pricing_engine.py
+=========================================================
+
+PROJECT STAGE:
+Pricing Optimization & Elasticity Intelligence Module
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module analyzes how price changes influence demand
+and generates pricing recommendations.
+
+While forecasting predicts future demand,
+pricing intelligence optimizes revenue and profitability.
+
+It answers:
+
+• How sensitive is demand to price changes?
+• Are we overpricing or underpricing?
+• Should we match competitor prices?
+• What is the optimal price adjustment?
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Retail businesses constantly face pricing decisions.
+
+Without elasticity analysis:
+
+• Price changes become guesswork
+• Revenue optimization is uncertain
+• Competitive positioning is weak
+
+This module quantifies demand sensitivity
+and supports strategic pricing.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical functions include:
+
+1️⃣ estimate_price_elasticity(df, store_id, product_id)
+
+Calculates price elasticity of demand:
+
+Elasticity =
+(% Change in Demand) /
+(% Change in Price)
+
+Interpretation:
+
+Elasticity < -1  → Highly price-sensitive
+Elasticity between 0 and -1 → Inelastic demand
+
+2️⃣ competitor_price_alert(df)
+
+Compares our price vs competitor price.
+
+If competitor price significantly lower:
+→ Alert generated.
+
+3️⃣ suggest_optimal_price(current_price, elasticity, competitor_price)
+
+Recommends price adjustments based on:
+• Elasticity sensitivity
+• Competitive benchmark
+• Demand optimization
+
+---------------------------------------------------------
+📊 BUSINESS VALUE CREATED
+---------------------------------------------------------
+This module enables:
+
+• Revenue maximization
+• Competitive pricing strategy
+• Margin protection
+• Data-driven price adjustments
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ what_if_simulation.py
+→ recommendation_engine.py
+→ inventory_decision_layer.py
+→ Streamlit pricing dashboard
+
+Pricing intelligence also influences
+forecast interpretation and promotion strategy.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Forecasting
+Layer 3: Risk & Inventory
+Layer 4: Regional & Seasonality Intelligence
+Layer 5: Promotion Intelligence
+Layer 6: Pricing Intelligence   ← This file
+Layer 7: Strategic AI Engine
+Layer 8: Dashboard
+
+---------------------------------------------------------
+
+"I developed a pricing engine that estimates demand 
+elasticity and benchmarks competitor pricing to 
+generate optimal price adjustment recommendations."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Forecasting predicts demand.
+
+Pricing intelligence optimizes revenue.
+
+Combining both transforms analytics
+into business optimization.
+=========================================================
+"""
