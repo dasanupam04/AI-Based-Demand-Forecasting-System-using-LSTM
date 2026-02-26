@@ -1,0 +1,121 @@
+"""
+=========================================================
+src/promotion_analysis.py
+=========================================================
+
+PROJECT STAGE:
+Promotion & Holiday Impact Intelligence Module
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module evaluates how promotions and holidays impact
+retail demand and revenue.
+
+While forecasting models learn historical demand patterns,
+this module explicitly measures the effect of marketing
+activities on sales performance.
+
+It answers:
+
+• Do promotions increase demand?
+• How strong is holiday impact?
+• Which campaigns are effective?
+• Is uplift sustainable?
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Retail demand is influenced by:
+
+• Discounts
+• Holiday events
+• Promotional campaigns
+• Marketing pushes
+
+If we do not isolate these effects:
+
+• Forecast accuracy may degrade
+• Baseline demand gets distorted
+• Promotion ROI cannot be measured
+
+This module separates organic demand from
+promotion-driven uplift.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical functions include:
+
+1️⃣ promotion_uplift_analysis(df)
+
+Compares:
+Average demand during promotion
+vs
+Average demand without promotion
+
+Uplift % =
+((Promo Demand - Normal Demand) /
+Normal Demand) × 100
+
+2️⃣ holiday_impact_analysis(df)
+
+Measures demand difference between:
+Holiday periods vs Non-holiday periods.
+
+3️⃣ Promotion Effectiveness Logic
+
+Optionally compares revenue impact
+to assess whether discounts improved profitability.
+
+---------------------------------------------------------
+📊 BUSINESS VALUE CREATED
+---------------------------------------------------------
+This module enables:
+
+• Evaluation of marketing ROI
+• Identification of high-performing campaigns
+• Optimization of promotion timing
+• Improved demand forecasting adjustments
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ recommendation_engine.py
+→ pricing_engine.py
+→ inventory_decision_layer.py
+→ Streamlit promotion insights panel
+
+Promotion uplift influences stock planning
+and pricing adjustments.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Forecasting
+Layer 3: Risk & Inventory
+Layer 4: Regional & Seasonality Intelligence
+Layer 5: Promotion Intelligence   ← This file
+Layer 6: Strategic AI Engine
+Layer 7: Dashboard
+
+---------------------------------------------------------
+
+"I implemented a promotion impact analysis module that 
+quantifies demand uplift during promotional and holiday 
+periods, enabling data-driven evaluation of marketing 
+effectiveness."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Not all demand growth is organic.
+
+Understanding promotion-driven demand
+improves forecasting reliability and marketing ROI.
+=========================================================
+"""
