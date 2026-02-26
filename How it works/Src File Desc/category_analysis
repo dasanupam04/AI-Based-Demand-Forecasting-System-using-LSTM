@@ -1,0 +1,122 @@
+"""
+=========================================================
+src/category_analysis.py
+=========================================================
+
+PROJECT STAGE:
+Category-Level Strategic Intelligence Module
+
+---------------------------------------------------------
+🎯 PURPOSE OF THIS FILE
+---------------------------------------------------------
+This module evaluates retail performance at the category level.
+
+While forecasting operates at product level,
+business strategy often operates at category level.
+
+Examples of categories:
+• Electronics
+• Apparel
+• Grocery
+• Seasonal Items
+
+This module answers:
+
+• Which categories are most profitable?
+• Which categories are growing?
+• Which categories are volatile?
+• Where should we invest marketing and inventory budget?
+
+---------------------------------------------------------
+🧠 WHAT PROBLEM THIS FILE SOLVES
+---------------------------------------------------------
+Focusing only on individual products may lead to
+suboptimal strategic decisions.
+
+Executives need aggregated insights:
+
+• Category revenue contribution
+• Category profitability margin
+• Category growth trend
+• Category risk exposure
+
+This module provides macro-level intelligence.
+
+---------------------------------------------------------
+⚙️ WHAT HAPPENS INSIDE THIS FILE
+---------------------------------------------------------
+
+Typical functions include:
+
+1️⃣ category_profitability(df)
+
+Calculates revenue and estimated profit by category.
+
+Revenue =
+Units Sold × Price × (1 - Discount)
+
+Estimated Cost (assumed factor, e.g., 60%)
+
+Profit =
+Revenue - Estimated Cost
+
+2️⃣ Category Growth Analysis
+
+Measures change in demand over time for each category.
+
+3️⃣ Category Volatility Measurement
+
+Standard deviation of demand within each category.
+
+High volatility → Higher safety stock requirement.
+
+---------------------------------------------------------
+📊 BUSINESS VALUE CREATED
+---------------------------------------------------------
+This module enables:
+
+• Strategic investment prioritization
+• Category-level marketing decisions
+• Budget allocation optimization
+• Risk diversification planning
+
+---------------------------------------------------------
+🔗 HOW IT CONNECTS TO THE PROJECT
+---------------------------------------------------------
+Feeds into:
+
+→ recommendation_engine.py
+→ Executive KPI calculations
+→ Seasonality strength evaluation
+→ Streamlit category dashboard panels
+
+Complements regional intelligence.
+
+---------------------------------------------------------
+🏗 ARCHITECTURAL POSITION
+---------------------------------------------------------
+Layer 1: Data
+Layer 2: Forecasting
+Layer 3: Risk & Inventory
+Layer 4: Regional Intelligence
+Layer 5: Seasonality & Promotion Intelligence
+Layer 6: Category Intelligence   ← This file
+Layer 7: Strategic AI Engine
+Layer 8: Dashboard
+
+---------------------------------------------------------
+
+"I implemented a category-level intelligence module to 
+evaluate profitability, growth, and volatility across 
+product groups, supporting high-level retail strategy decisions."
+
+---------------------------------------------------------
+🧠 KEY LEARNING
+---------------------------------------------------------
+Product-level forecasting is tactical.
+
+Category-level intelligence is strategic.
+
+Strong retail systems combine both perspectives.
+=========================================================
+"""
