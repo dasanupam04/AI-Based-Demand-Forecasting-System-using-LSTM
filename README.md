@@ -117,88 +117,56 @@ This system enables:
 
 
 🧠 Core Features
-1️⃣ Demand Forecasting
 
-LSTM deep learning model
+    1️⃣ Demand Forecasting
+    - LSTM deep learning model
+    - ARIMA statistical benchmark
+    - Sliding window time-series modeling
+    - Multi-product scalable pipeline
 
-ARIMA statistical benchmark
+    2️⃣ Uncertainty Estimation
+    - Residual variance analysis
+    - 95% confidence safety stock calculation
+    - Risk-aware forecasting
 
-Sliding window time-series modeling
+    3️⃣ Inventory Decision Layer
+    - Reorder point calculation
+    - Stock sufficiency check
+    - Risk-adjusted buffer planning
+    
+    4️⃣ Pricing Intelligence
+    - Price elasticity estimation
+    - Competitor price alert system
+    - Optimal price suggestion logic
 
-Multi-product scalable pipeline
+    5️⃣ Promotion & Holiday Analysis
+    - Promotion uplift calculation
+    - Holiday demand spike detection
+    - Campaign effectiveness evaluation
+    
+    6️⃣ Regional & Category Intelligence
+    - Growth rate analysis
+    - Profitability breakdown
+    - Demand volatility assessment
+    - Stock efficiency metrics
 
-2️⃣ Uncertainty Estimation
+    7️⃣ Demand Segmentation
+    - Stable vs Volatile product classification
+    - Risk-adjusted inventory logic
 
-Residual variance analysis
+    8️⃣ Model Comparison
+    - LSTM vs ARIMA benchmarking
+    - MAE & RMSE evaluation
+    - Best model selection
 
-95% confidence safety stock calculation
+    9️⃣ What-If Simulation
+    - Price change simulation
+    - Elasticity-based demand impact
+    - Revenue projection under hypothetical scenarios
 
-Risk-aware forecasting
-
-3️⃣ Inventory Decision Layer
-
-Reorder point calculation
-
-Stock sufficiency check
-
-Risk-adjusted buffer planning
-
-4️⃣ Pricing Intelligence
-
-Price elasticity estimation
-
-Competitor price alert system
-
-Optimal price suggestion logic
-
-5️⃣ Promotion & Holiday Analysis
-
-Promotion uplift calculation
-
-Holiday demand spike detection
-
-Campaign effectiveness evaluation
-
-6️⃣ Regional & Category Intelligence
-
-Growth rate analysis
-
-Profitability breakdown
-
-Demand volatility assessment
-
-Stock efficiency metrics
-
-7️⃣ Demand Segmentation
-
-Stable vs Volatile product classification
-
-Risk-adjusted inventory logic
-
-8️⃣ Model Comparison
-
-LSTM vs ARIMA benchmarking
-
-MAE & RMSE evaluation
-
-Best model selection
-
-9️⃣ What-If Simulation
-
-Price change simulation
-
-Elasticity-based demand impact
-
-Revenue projection under hypothetical scenarios
-
-🔟 AI Recommendation Engine
-
-Integrated multi-layer logic
-
-Inventory adjustments
-
-Pricing strategy suggestions
-
-Regional growth alerts
-
-Promotion timing guidance
+    🔟 AI Recommendation Engine
+    - Integrated multi-layer logic
+    - Inventory adjustments
+    - Pricing strategy suggestions
+    - Regional growth alerts
+    - Promotion timing guidance
