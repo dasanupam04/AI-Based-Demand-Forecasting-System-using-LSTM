@@ -170,3 +170,64 @@ This system enables:
     - Pricing strategy suggestions
     - Regional growth alerts
     - Promotion timing guidance
+
+
+
+
+🛠 Technologies Used
+      
+      - Python
+      - Pandas
+      - NumPy
+      - Scikit-learn
+      - TensorFlow / Keras
+      - Statsmodels
+      - Matplotlib / Plotly
+      - Streamlit
+
+
+🚀 Deployment
+
+The project is deployed using Streamlit.
+
+
+To run locally:
+
+      pip install -r requirements.txt
+      streamlit run app.py
+
+
+
+📊 Dashboard Capabilities
+
+     - Executive KPI overview
+     - Model comparison panel
+     - Seasonal pattern visualization
+     - Pricing strategy insights
+     - What-if simulation slider
+     - Regional profitability tables
+     - AI-generated recommendations
+
+
+📈 Key Learning Outcomes
+
+    - Time-series forecasting with LSTM
+    - Risk-aware inventory planning
+    - Demand elasticity modeling
+    - Concept drift monitoring
+    - Modular production ML architecture
+    - Integration of multiple intelligence layers
+    - Building scalable ML systems
+    - Converting analytics into decision intelligence
+
+
+🎓 Interview Talking Points
+
+    - This project demonstrates:
+    - End-to-end ML system design
+    - Clean modular architecture
+    - Multi-model benchmarking
+    - Business-focused AI implementation
+    - Deployment-ready ML engineering
+    - Strategic thinking beyond prediction
+    
