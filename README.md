@@ -3,7 +3,7 @@
 An end-to-end AI-powered retail analytics platform that integrates demand forecasting, uncertainty estimation, pricing optimization, regional intelligence, and strategic recommendation generation into a unified decision intelligence system.
 
 
-
+ 
 📌 Project Overview
 
 This project goes beyond traditional forecasting.
@@ -233,8 +233,16 @@ To run locally:
     - Strategic thinking beyond prediction
 
 
-    
+📌 Future Improvements
+
+    Automated retraining pipeline
+    API deployment (FastAPI)
+    Real-time streaming data integration
+    Cloud model serving
+    Reinforcement learning for dynamic pricing
 
 
+👨‍💻 Author
 
-
+Anupam
+Engineer | Data Science & AI Enthusiast
